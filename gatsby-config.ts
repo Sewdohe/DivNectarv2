@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `DivNectar-v2`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.divnectar.com`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -21,14 +21,22 @@ const config: GatsbyConfig = {
       "path": "./src/images/"
     },
     __key: "images"
-  }, {
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": "posts",
+      "path": "./src/posts/"
     },
-    __key: "pages"
-  }]
+    __key: "posts"
+  },
+  {
+    resolve: `gatsby-plugin-typography`,
+    options: {
+      pathToConfigModule: `src/styles/typography`,
+    },
+  },
+]
 };
 
 export default config;
