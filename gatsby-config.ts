@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: `DivNectar`,
     name: 'Div Nectar',
-    siteUrl: `https://divnectar-b8c6a.web.app`,
+    siteUrl: `https://divnectar.com`,
     image: '/images/nectar-open-graph-image-2022.jpg',
     twitterUsername: '@Sewdohe',
     description: "Dev-Tooling, but on a pillowy cloud ☁️. Learn to streamline your development process and customize your linux machine!",
