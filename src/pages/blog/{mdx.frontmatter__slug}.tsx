@@ -30,8 +30,15 @@ const PostBody = styled.div`
 
 const TocContainer = styled.div`
   grid-area: toc;
+  transition: all 0.7s;
   @media only screen and (max-width: 1200px) {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    right: 100vw;
+    /* left: 0; */
+    top: 50px;
   }
 `
 

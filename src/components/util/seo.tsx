@@ -38,19 +38,6 @@ const Seo = ({ title, description, pathname, children, image }: SeoProps) => {
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <link rel="icon" href="/images/logo.png" />
       {children}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MRGGEC7MM"></script>
-      <script>
-
-        {
-          window.dataLayer = window.dataLayer || [];
-        }
-
-        {/* @ts-ignore */}
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-2MRGGEC7MM');
-      </script>
   </>
   );
 };
