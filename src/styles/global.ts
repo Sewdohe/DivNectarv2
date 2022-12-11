@@ -42,6 +42,13 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     color: ${(props) => props.theme.colors.foreground};
   }
+  pre {
+    max-width: 100%;
+    overflow: scroll;
+    div {
+      max-width: 100%;
+    }
+  }
 `;
 
 export default GlobalStyle;

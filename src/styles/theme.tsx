@@ -15,6 +15,8 @@ export const theme: DefaultTheme = {
     purple: "#bd93f9",
     red: "#ff5555",
     yellow: "#f1fa8c",
+    code: "#2a2734",
+    navBG:"rgba(42, 39, 52, 0.8)"
   },
   fonts: ["sans-serif", "Roboto"],
   fontSizes: {

@@ -8,8 +8,15 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 1rem;
   height: 60px;
-  background: ${(props) => props.theme.colors.surface};
+  backdrop-filter: blur(10px);
+  background: ${(props) => props.theme.colors.navBG};
   margin-bottom: 1rem;
+  box-shadow: 5px 6px 6px 2px rgba(0,0,0,0.2);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  border-bottom: 1px solid ${(props) => props.theme.colors.surface};
 `
 
 const Spacer = styled.div`
