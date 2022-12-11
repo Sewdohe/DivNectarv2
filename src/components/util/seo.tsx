@@ -2,6 +2,8 @@ import React, { Fragment, PropsWithChildren } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useSiteMetadata } from "../../utils/use-site-metadata";
+// @ts-ignore
+import Gtag from "../../utils/gtag";
 
 interface SeoProps extends PropsWithChildren{
   title: string,
@@ -38,6 +40,7 @@ const Seo = ({ title, description, pathname, children, image }: SeoProps) => {
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <link rel="icon" href="/images/logo.png" />
       {children}
+      <Gtag />
   </>
   );
 };

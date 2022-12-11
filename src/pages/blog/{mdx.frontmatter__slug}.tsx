@@ -17,7 +17,7 @@ const PageContainer = styled.article`
   grid-template-areas:
     "post toc";
   grid-template-rows: 3fr 1fr;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
     justify-content: center;
     max-width: 100%;
@@ -31,6 +31,8 @@ const PostBody = styled.div`
 const TocContainer = styled.div`
   grid-area: toc;
   transition: all 0.7s;
+  position: fixed;
+  right: 30px;
   @media only screen and (max-width: 1200px) {
     /* display: none; */
     position: absolute;
