@@ -10,8 +10,6 @@ const Site = styled.div`
 `
 
 const PageContent = styled.div`
-  display: flex;
-  justify-content: center;
   margin-top: 65px;
   max-width: 100vw;
   overflow: hidden;

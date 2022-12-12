@@ -13,10 +13,6 @@ const CardContainer = styled.div`
   padding-top: 1rem;
 `
 
-const CardContent = styled.div`
-  padding: 2px 16px;
-`
-
 const Card = ({children}: PropsWithChildren) => {
   return (
     <CardContainer>
