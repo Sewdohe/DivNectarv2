@@ -54,6 +54,7 @@ const UL = styled.ul<{depth: number}>`
   padding: 0 0.6rem;
   margin-left: 0.5rem;
   margin-right: 1rem;
+  line-height: 0.7rem;
   list-style-type: none;
   font-size: 14px;
   width: 250px;
@@ -109,6 +110,7 @@ const UL = styled.ul<{depth: number}>`
 const LI = styled.li`
   padding: 0px;
   margin-bottom: 0px;
+  line-height: 0.7rem;
 `
 
 const TableOfContents = ({ slug, items, depth }: Props) => {

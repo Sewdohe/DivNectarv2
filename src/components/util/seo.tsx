@@ -40,7 +40,6 @@ const Seo = ({ title, description, pathname, children, image }: SeoProps) => {
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <link rel="icon" href="/images/logo.png" />
       {children}
-      <Gtag />
   </>
   );
 };

@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.foreground};
     padding: 0;
     margin: 0;
+    line-height: 1.6rem;
   }
   a {
     color: ${(props) => props.theme.colors.cyan};

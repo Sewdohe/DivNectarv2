@@ -9,6 +9,8 @@ category: Configuration
 # Xbox one Bluetooth on Linux
 Configure an Xbox360 or Xbox One controller to work on your Linux system using [https:https://aur.archlinux.org/packages/xpadneo-dkms](XpadneoDKMS) open-source driver!! Often times when trying to pair an Xbox controller, the computer will attempt pairing but the Xbox light on the controller won't remain lit after pairing. Read on my dear friend!
 
+[Gatsby](https://www.gatsbyjs.org/) is a free and open source framework for developing blazing fast websites and apps.
+
 ## Prereqs
 
 *** Installing
@@ -41,10 +43,10 @@ Installation
     push the connect button on upper side of the gamepad, and hold it down until the light starts flashing fast
     wait for the gamepad to show up in bluetoothctl, remember the address (e.g. `C8:3F:26:XX:XX:XX`)
     [bluetooth]# scan off to stop scanning as it may interfere with properly pairing the controller
-    [bluetooth]# pair <MAC>
-    [bluetooth]# trust <MAC>
-    [bluetooth]# connect <MAC> (should usually not be needed but there are open bugs)
-    The <MAC> parameter is optional if the command line already shows the controller name
+    [bluetooth]# pair \<MAC>
+    [bluetooth]# trust \<MAC>
+    [bluetooth]# connect \<MAC> (should usually not be needed but there are open bugs)
+    The \<MAC> parameter is optional if the command line already shows the controller name
 ```
 
 ## Config Files
