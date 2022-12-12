@@ -4,68 +4,87 @@ import styled from "styled-components";
 import TableOfContents from "../../components/ui/TOC";
 import Seo from "../../components/util/seo";
 import { MdToc } from "react-icons/md";
-
+import { devices } from "../../utils/devices";
 import { Blog } from "schema-dts";
 import { JsonLd } from "react-schemaorg";
 
 interface TOCProps {
-  opened: boolean;
+  isOpen: boolean;
 }
 
 const PageContainer = styled.article`
-  max-width: 100%;
-  padding: 1rem;
-  display: grid;
-  overflow: hidden;
-  justify-content: flex-start;
-  gap: 20px;
-  grid-template-areas:
-    "post toc";
-  @media only screen and (max-width: 1200px) {
+  @media ${devices.mobileS} {
     display: block;
-    justify-content: center;
+    max-width: 90%;
+    margin: auto auto;
+  }
+  @media ${devices.laptop} {
     max-width: 100%;
+    padding: 1rem;
+    display: grid;
+    overflow: hidden;
+    justify-content: flex-start;
+    gap: 30px;
+    grid-template-areas:
+      "post toc";
   }
 `;
 
 const PostBody = styled.div`
-  grid-area: post;
-  max-width: 70%;
-  @media only screen and (max-width: 1200px) {
+  @media ${devices.mobileS} {
     display: block;
     justify-content: center;
     max-width: 100%;
   }
+  @media ${devices.laptop} {
+   grid-area: post;
+   max-width: 70%;
+ }
 `;
 
-const TocContainer = styled.div`
-  grid-area: toc;
+const TocContainer = styled.div<TOCProps>`
   transition: all 0.7s;
-  position: fixed;
-  right: 30px;
-  max-width: 30%;
-  overflow-x: hidden;
-  @media only screen and (max-width: 1200px) {
-    /* display: none; */
+  z-index: 50;
+  width: 100vw;
+  @media ${devices.mobileS} {
     position: fixed;
+    align-content: flex-start;
     height: calc(100vh - 50px);
-    min-width: 100vw;
-    right: ${(props) => !props.isOpen ? '100vw' : 0};
-    left: ${(props) => !props.isOpen ? '0' : '100vw'};
+    right: ${(props) => props.isOpen ? '100vw' : 0};
+    left: ${(props) => props.isOpen ? '0' : '100vw'};
     top: 50px;
+    max-height: calc(100vh - 50px);
+  }
+  @media ${devices.laptop} {
+    
+    grid-area: toc;
+    position: fixed;
+    left: 70vw;
+    right: 30px;
+    width: 30%;
+    top: 50px;
+    padding: 2rem;
+    min-width: 30%;
+    overflow-y: scroll;
   }
 `
 
 const TocButton = styled.button`
-  border-radius: 10%;
-  background: ${(props) => props.theme.colors.purple};
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border: none;
-  font-size: 2.4rem;
-  padding: 2px;
-  border: 1px solid ${(props) => props.theme.colors.cyan}
+  @media ${devices.mobileS} {
+    border-radius: 10%;
+    background: ${(props) => props.theme.colors.purple};
+    position: fixed;
+    right: 20px;
+    z-index: 60;
+    bottom: 20px;
+    border: none;
+    font-size: 2.4rem;
+    padding: 2px;
+    border: 1px solid ${(props) => props.theme.colors.cyan};
+  }
+  @media ${devices.laptop} {
+    display: none;
+  }
 `
 
 interface TableOfContents {
