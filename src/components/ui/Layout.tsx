@@ -13,6 +13,7 @@ const PageContent = styled.div`
   margin-top: 65px;
   max-width: 100vw;
   overflow: hidden;
+  padding: 0 1rem;
 `
 
 const Layout = ({children}: PropsWithChildren) => {

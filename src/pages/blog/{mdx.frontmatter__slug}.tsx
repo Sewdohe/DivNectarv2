@@ -42,6 +42,18 @@ const PostBody = styled.div`
  }
 `;
 
+const PostHeader = styled.div`
+  display: flex;
+  justify-content: center;
+  background: ${(props) => props.theme.colors.navBG};
+`
+
+const PostDate = styled.p`
+  opacity: 0.7;
+  font-size: 0.8rem;
+  text-align: center;
+`
+
 const TocContainer = styled.div<TOCProps>`
   transition: all 0.7s;
   z-index: 50;
@@ -133,6 +145,10 @@ const BlogPost = ({ data, children }: PageProps<Queries.PostQuery>) => {
   const [tocOpen, setTocOpen] = useState(false)
   return (
     <PageContainer>
+      <PostHeader>
+        <h1>{data.mdx?.frontmatter?.title}</h1>
+        <PostDate>{data.mdx?.frontmatter?.date}</PostDate>
+      </PostHeader>
       <PostBody>{children}</PostBody>
       {/* @ts-ignore */}
       <TocContainer isOpen={tocOpen}>

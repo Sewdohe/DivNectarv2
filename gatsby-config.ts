@@ -27,7 +27,8 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-      },
+        resolveSiteUrl: () => 'https://divnectar.com',
+      }
     },
     // `gatsby-plugin-open-graph-images`,
     {
@@ -77,7 +78,7 @@ const config: GatsbyConfig = {
           remarkPlugins: [
           ],
           rehypePlugins: [
-            require('rehype-slug')          ],
+            require('rehype-slug')],
         },
       },
     },
